@@ -1,0 +1,46 @@
+{
+	"name": "noresources/reflection", 
+	"description": "PHP class and source file reflection utilities", 
+	"type": "library", 
+	"keywords": [
+		"reflection"
+	], 
+	"license": "MIT", 
+	"authors": [
+		{
+			"name": "Renaud Guillard", 
+			"email": "dev@nore.fr", 
+			"role": "lead"
+		}
+	], 
+	"support": {
+		"issues": "https://github.com/noresources/php-reflection/issues"
+	}, 
+	"scripts": {
+		"test": "@php  ./vendor/bin/phpunit --color=never --strict-coverage --bootstrap vendor/autoload.php tests"
+	}, 
+	"require": {
+		"php": ">= 7.1", 
+		"noresources/core": "^3.0"
+	}, 
+	"autoload": {
+		"psr-4": {
+			"NoreSources\\Test\\Reflection\\": "tests/cases/", 
+			"NoreSources\\Reflection\\": "src/"
+		}
+	}, 
+	"require-dev": {
+		"phpunit/phpunit": ">= 7.0"
+	}, 
+	"extra": {
+		"branch-alias": {
+			"dev-main": "1.0.x-dev"
+		}
+	}, 
+	"autoload-dev": {
+		"psr-4": {
+			"": "tests/data/Root/", 
+			"NoreSources\\Test\\Data\\": "tests/data/Data/"
+		}
+	}
+}
