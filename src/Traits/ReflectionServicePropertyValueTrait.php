@@ -35,7 +35,7 @@ trait ReflectionServicePropertyValueTrait
 
 	protected function populateClassPropertiyValues(&$properties,
 		ReflectionClass $class, $object, $flags = 0,
-		ReflectionClass $derivedClass = null)
+		?ReflectionClass $derivedClass = null)
 	{
 		if (($flags & ReflectionService::EXPOSE_INHERITED_PROPERTY) &&
 			($parent = $class->getParentClass()))
@@ -70,7 +70,7 @@ trait ReflectionServicePropertyValueTrait
 	}
 
 	protected function populatePropertyValue(&$value, $object, $property,
-		$flags = 0, ReflectionClass $derivedClass = null)
+		$flags = 0, ?ReflectionClass $derivedClass = null)
 	{
 		$isPublic = false;
 		try
