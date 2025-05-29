@@ -146,10 +146,8 @@ class ReflectionDocCommentTest extends \PHPUnit\Framework\TestCase
 		}
 	}
 
-	public function __construct($name = null, array $data = [],
-		$dataName = '')
+	public function setUp(): void
 	{
-		parent::__construct($name, $data, $dataName);
 		$this->setUpDerivedFileTestTrait(__DIR__ . '/..');
 	}
 
