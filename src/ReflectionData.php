@@ -14,9 +14,9 @@ class ReflectionData implements \Reflector
 {
 
 	public function __construct($class, $name,
-		\ReflectionProperty $reflectionProperty = null,
-		\ReflectionMethod $readMethod = null,
-		\ReflectionMethod $writeMethod = null)
+		?\ReflectionProperty $reflectionProperty = null,
+		?\ReflectionMethod $readMethod = null,
+		?\ReflectionMethod $writeMethod = null)
 	{
 		if ($reflectionProperty)
 			$this->reflectionProperty = $reflectionProperty;
@@ -91,7 +91,7 @@ class ReflectionData implements \Reflector
 	 *
 	 * @param \ReflectionMethod $method
 	 */
-	public function setReadMethod(\ReflectionMethod $method = null)
+	public function setReadMethod(?\ReflectionMethod $method = null)
 	{
 		$this->readMethod = $method;
 	}
@@ -100,7 +100,7 @@ class ReflectionData implements \Reflector
 	 *
 	 * @param \ReflectionMethod $method
 	 */
-	public function setWriteMethod(\ReflectionMethod $method = null)
+	public function setWriteMethod(?\ReflectionMethod $method = null)
 	{
 		$this->writeMethod = $method;
 	}
